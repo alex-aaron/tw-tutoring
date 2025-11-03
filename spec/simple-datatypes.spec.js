@@ -6,3 +6,12 @@ describe("Concatenating and Reassigning Strings", () => {
     assert.equal(city, 'New Orleans, LA');
   })
 });
+
+describe("addDescriptor", () => {
+  it('should return a string', () => {
+    assert.equal(typeof addDescriptor('Stanley Ray', 'jr'), 'string');
+  });
+  it('should return the correct string', () => {
+    assert.equal(addDescriptor('Stanley Ray', 'jr'), 'Stanley Ray, JR');
+  });
+});
