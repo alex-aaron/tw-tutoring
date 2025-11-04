@@ -15,3 +15,12 @@ describe("addDescriptor", () => {
     assert.equal(addDescriptor('Stanley Ray', 'jr'), 'Stanley Ray, JR');
   });
 });
+
+describe("getSalutation", () => {
+  it('should return a string', () => {
+    assert.equal(typeof getSalutation("Mrs. Stephanie Cooper"), 'string');
+  });
+  it('should return the salutation at the beginning of the string', () => {
+    assert.equal(getSalutation("Mrs. Stephanie Cooper"), "Mrs.");
+  })
+});

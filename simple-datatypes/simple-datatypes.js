@@ -26,3 +26,10 @@ the input name with descriptor uppercased like so.
 addDescriptor('Stanley Ray', 'jr'); // => 'Stanley Ray, JR'
 */
 
+
+
+// Prompt #4 //
+/*
+Create a function called getSalutation that takes in a string like "Mrs. Stephanie Cooper"
+and just returns the "Mrs."
+*/

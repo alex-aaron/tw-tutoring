@@ -1,6 +1,6 @@
-## Simple Data Types
+# Simple Data Types
 
-### Strings
+## Strings
 The first simple datatype we will discuss are strings. In JavaScript, strings are used to represent text, and they are one of the common datatypes used. Something important to remember about strings and numbers is that they are immutable, meaning that once you create a string you cannot mutate itss value in place. You can create a copy of that value that is different, but you cannot mutate it. Look at this example...
 
 ```javascript
@@ -78,7 +78,35 @@ functon addExclamation(string){
   return string + "!";
 }
 ```
-#### Important String Methods
+### Important String Methods
 
 Some methods you need to be comfortable with are `toUpperCase()`,
-`toLowerCase()`, `split()`, `join()`, 
+`toLowerCase()`, `split()`, `join()`. 
+
+#### .split() and .join()
+
+Split is a string method that allows you to "split" a string into an array, which can be useful for a variety of reasons. For example, imagine we have a variable of `fullName` which is someone's first and last name. What if we want to only access the first name part of that string, perhaps to use it in a greeting string. For example...
+
+```javascript
+var fullName = 'Alex Aaron';
+
+var greeting = "Hello, " + <?>;
+
+console.log(greeting); // => Hello, Alex
+```
+
+To do, this we can use the split method to "split" `fullName` into an array that looks like this: `['Alex', 'Aaron']`. We can do that with this code:
+
+```javascript
+var fullName = 'Alex Aaron';
+
+var nameArray = fullName.split(" ");
+
+var greeting = "Hello, " + nameArray[0];
+
+console.log(greeting); // => Hello, Alex
+```
+
+Notice that in `var nameArray = fullName.split(" ")` we are passing `" "` as an argument to the split method. In essence, we are telling the computer, "split the string at the spaces", which gives us an array of `['Alex', 'Aaron']`. 
+
+The split and join methods are useful methods to learn together because the join method can take an array of strings and join it back into a single string.
